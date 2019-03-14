@@ -1,7 +1,6 @@
 package main
 
 import (
-	"errors"
 	"fmt"
 	"time"
 )
@@ -28,8 +27,8 @@ func main() {
 	}
 
 
-	nodataerror := errors.New("No Data!")
-	fmt.Println(nodataerror.Error())
+	//nodataerror := errors.New("No Data!")
+	//fmt.Println(nodataerror.Error())
 
 	//myerr := MyError{
 	//	time.Date(1989, 3, 15, 22, 30, 0, 0, time.UTC),
