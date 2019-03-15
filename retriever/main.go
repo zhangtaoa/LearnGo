@@ -5,23 +5,18 @@ import (
 	"fmt"
 )
 
-type Retriever interface {
+type retriever interface {
 	Get(url string) string
 }
 
-func download(r Retriever) string {
-	return r.Get("http://www.baidu.com")
+func download(r retriever) string {
+	return r.Get("www.baidu.com")
 }
 
 func main() {
-	var r Retriever
-	r = mock.Retriever{"This is zhangtao test"}
-	fmt.Printf("%T %v\n", r, r)
+	var r retriever
+	r = mock.Retriever{"zhangtao"}
 	fmt.Println(download(r))
-
-	r1 := mock.Retriever{"This is zhangtao test"}
-	fmt.Println(r1.Content)
-
-	//r = real.Retriever{}
-	//fmt.Println(download(r))
 }
+
+
