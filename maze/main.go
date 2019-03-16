@@ -143,8 +143,8 @@ func GetWalk(steps [][]int, end point)  [][]int {
 		step_map[i] = make([]int, len(steps[i]))
 	}
 
-	for i := range step_list {
-		i,j := step_list[i].i,step_list[i].j
+	for _, v := range step_list {
+		i,j := v.i,v.j
 		step_map[i][j] = 1
 	}
 
